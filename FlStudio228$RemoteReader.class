@@ -1,0 +1,19 @@
+Êþº¾   1 o  #AppendixA/BeatBoxFinal$RemoteReader  java/lang/Object  java/lang/Runnable checkboxState [Z 
+nameToShow Ljava/lang/String; obj Ljava/lang/Object; this$0 LAppendixA/BeatBoxFinal; <init> (LAppendixA/BeatBoxFinal;)V Code	    
+     ()V	    	   	 
+	     LineNumberTable LocalVariableTable this %LAppendixA/BeatBoxFinal$RemoteReader; run	 # % $ java/lang/System & ' out Ljava/io/PrintStream; ) got an object from server
+ + - , java/io/PrintStream . / println (Ljava/lang/String;)V
+  1 2 3 getClass ()Ljava/lang/Class;
+ + 5 . 6 (Ljava/lang/Object;)V 8 java/lang/String	 : < ; AppendixA/BeatBoxFinal = > in Ljava/io/ObjectInputStream;
+ @ B A java/io/ObjectInputStream C D 
+readObject ()Ljava/lang/Object; 	 : G H I otherSeqsMap Ljava/util/HashMap;
+ K M L java/util/HashMap N O put 8(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;	 : Q R S 
+listVector Ljava/util/Vector;
+ U W V java/util/Vector X Y add (Ljava/lang/Object;)Z	 : [ \ ] incomingList Ljavax/swing/JList;
+ _ a ` javax/swing/JList b c setListData (Ljava/util/Vector;)V
+ e g f java/lang/Exception h  printStackTrace e Ljava/lang/Exception; 
+SourceFile BeatBoxFinal.java InnerClasses RemoteReader !              	 
+                     O     *+µ *· *µ *µ *µ ±            	                 !      ç     y§ ^² "(¶ *² "*´ ¶ 0¶ 4*´ À 7L**´ ´ 9¶ ?À Eµ *´ ´ F+*´ ¶ JW*´ ´ P+¶ TW*´ ´ Z*´ ´ P¶ ^**´ ´ 9¶ ?Zµ Çÿ–§ L+¶ d±    s s e     .     	 
+   1 A M ^ s x         y        > 	 
+  t  i j   k    l m   
+   : n 
